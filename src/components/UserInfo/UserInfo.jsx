@@ -4,8 +4,6 @@ const UserInfo = (props) => {
 
     const
     {avatar,
-    github,
-    github_name,
     name,
     public_repos,
     followers,
@@ -14,7 +12,12 @@ const UserInfo = (props) => {
     return (
         <div>
             <img src={avatar} alt="Avatar"/>
-            
+            <div>
+                <h4>{name}</h4>
+                <h4>REPOS:{public_repos}</h4>
+                <h4>FLLWRS:{followers}</h4>
+                <h4>FLLWING:{following}</h4>
+            </div>
         </div>
     )
 }
