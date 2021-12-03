@@ -1,10 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const UserInfo = (props) => {
 
     const
     {avatar,
-    name,
     public_repos,
     followers,
     github_name,
@@ -17,8 +17,12 @@ const UserInfo = (props) => {
                 <h4>{github_name}</h4>
             </div>
             <div>
-                <h4>REPOS:{public_repos}</h4>
-                <h4>FLLWRS:{followers}</h4>
+                <h4>REPOS:{public_repos}</h4>       
+                <h4>
+                <Link to={`/followers/${github_name}`}>
+                FLLWRS:{followers}
+                </Link>
+                </h4>
                 <h4>FLLWING:{following}</h4>
             </div>
         </div>

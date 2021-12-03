@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 //COMPONENTS
 import UserForm from '../Form/UserForm'
-import Header from '../Header/Header'
 import Loading from '../Loading'
 import UserInfo from '../UserInfo/UserInfo'
 import NotFound from '../NotFound'
@@ -37,8 +36,7 @@ const Home = () => {
 
 
     return (
-        <div>
-            <Header/>
+        <div>public_repos
             <UserForm 
             handleUser={handleUser}
             handleSerchUser={handleSerchUser}/>

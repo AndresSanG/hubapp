@@ -1,15 +1,26 @@
-
+import React from 'react';
+import { BrowserRouter,Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './components/Home/Home';
+import MainLaout from './components/Layouts/MainLaout';
+import Followers from './views/Followers/Followers';
 
 //STATES
 function App() {
   return (
-
-    <div className="App">
+    <BrowserRouter>
+    <Switch>
+      <MainLaout>
+      <Route path="/" exact>
       <Home/>
-    </div>
+      </Route>
+      <Route path="/followers/:user" exact>
+        <Followers/>
+      </Route>
+      </MainLaout>
+      </Switch>
+      </BrowserRouter>
   );
 }
 
