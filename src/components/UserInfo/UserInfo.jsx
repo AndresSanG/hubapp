@@ -7,13 +7,16 @@ const UserInfo = (props) => {
     name,
     public_repos,
     followers,
+    github_name,
     following}
     = props;
     return (
         <div>
-            <img src={avatar} alt="Avatar"/>
             <div>
-                <h4>{name}</h4>
+            <img src={avatar} alt="Avatar"/>
+                <h4>{github_name}</h4>
+            </div>
+            <div>
                 <h4>REPOS:{public_repos}</h4>
                 <h4>FLLWRS:{followers}</h4>
                 <h4>FLLWING:{following}</h4>
